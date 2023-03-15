@@ -10,3 +10,24 @@
     <h1>test template</h1>
 </body>
 </html>
+
+
+<!--
+var data = JSON.parse("{\"data\":{\"user\":{\"user_info\":{\"id\":\"AoGC2HQ9vedHmzcMX\"},\"product\":[{\"node\":{\"id\":\"NzcxNzU2ODU1ODM1\",\"feedback\":{\"raters\":{\"nodes\":[{\"id\":\"1\",\"name\":\"Dan\"},{\"id\":\"2\",\"name\":\"Allen\"},{\"id\":\"3\",\"name\":\"Williams\"}]},\"commentors\":{\"nodes\":[{\"id\":\"001\",\"name\":\"Kent\"},{\"id\":\"002\",\"name\":\"Jay\"}]}}}}]}}}"); 
+test = data
+
+'data.user.user_info.id'
+.split('.')
+.forEach(x => {
+    console.log('here >>>', x, test[x])
+    test = test[x]
+}) 
+
+
+
+'data.user.user_info.id'
+.split('.')
+.reduce((value, fieldName) => {
+  return value[fieldName];
+}, data)
+-->
